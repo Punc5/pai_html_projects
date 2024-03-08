@@ -8,29 +8,31 @@
 <body>
     <h2>Kalkulator</h2>
     <script type="text/javascript">
-        let x = parseInt(prompt("Podaj 1. liczbę"));
-        let y = parseInt(prompt("Podaj 2. liczbę"));
+        let x = Number(prompt("Podaj 1. liczbę"));
+        let y = Number(prompt("Podaj 2. liczbę"));
         if(isNaN(x) || isNaN(y))
         {
-            document.write("<p><b>Nieprawidłowe dane</b>; Podaj poprawne liczby</p>");
+            document.write("<p><b>Nieprawidłowe dane</b>. Podaj poprawne liczby</p>");
         }
         else
         {
+            document.write("x = " + x + "<br>")
+            document.write("y = " + y + "<br>")
             // Dodawanie
             suma = x + y;
-            document.write("suma = " + suma + "<br>");
+            document.write("x + y = " + suma + "<br>");
             // Odejmowanie
             roznica = x - y;
-            document.write("różnica = " + roznica + "<br>");
+            document.write("x - y = " + roznica + "<br>");
             // Mnożenie
             iloczyn = x * y;
-            document.write("iloczyn = " + iloczyn + "<br>");
+            document.write("x * y = " + iloczyn + "<br>");
             // Sprawdzenie, czy y nie jest równe 0
             if(y !== 0 )
             {
                 // Dzielenie
                 iloraz = x / y;
-                document.write("iloraz = " + iloraz + "<br>");
+                document.write("x / y = " + iloraz + "<br>");
             }
             else
             {
