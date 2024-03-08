@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosty kalkulator</title>
+    <title>Kalkulator</title>
 </head>
 <body>
-    <h2>Prosty kalkulator</h2>
+    <h2>Kalkulator</h2>
     <script type="text/javascript">
         let x = parseInt(prompt("Podaj 1. liczbę"));
         let y = parseInt(prompt("Podaj 2. liczbę"));
@@ -36,6 +36,12 @@
             {
                 document.write("<p><b>Nie można dzielić przez 0</b>; Podaj y różne od 0</p>");
             }
+            // Kwadrat
+            kwadrat = Math.pow(x,2);
+            document.write("kwadrat liczby = " + kwadrat + "<br>");
+            // Sześcian
+            szescian = Math.pow(x,3);
+            document.write("sześcian liczby = " + szescian + "<br>");
         }
     </script>
 </body>
