@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosty kalkulator</title>
+</head>
+<body>
+    <h2>Prosty kalkulator</h2>
+    <script type="text/javascript">
+        let x = parseInt(prompt("Podaj 1. liczbę"));
+        let y = parseInt(prompt("Podaj 2. liczbę"));
+        if(isNaN(x) || isNaN(y))
+        {
+            document.write("<p><b>Nieprawidłowe dane</b>; Podaj poprawne liczby</p>");
+        }
+        else
+        {
+            // Dodawanie
+            suma = x + y;
+            document.write("suma = " + suma + "<br>");
+            // Odejmowanie
+            roznica = x - y;
+            document.write("różnica = " + roznica + "<br>");
+            // Mnożenie
+            iloczyn = x * y;
+            document.write("iloczyn = " + iloczyn + "<br>");
+            // Sprawdzenie, czy y nie jest równe 0
+            if(y !== 0 )
+            {
+                // Dzielenie
+                iloraz = x / y;
+                document.write("iloraz = " + iloraz + "<br>");
+            }
+            else
+            {
+                document.write("<p><b>Nie można dzielić przez 0</b>; Podaj y różne od 0</p>");
+            }
+        }
+    </script>
+</body>
+</html>

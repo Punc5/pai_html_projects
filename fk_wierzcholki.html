@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wierzchołki funkcji kawdratowej</title>
+</head>
+<body>
+    <h2>Wierzchołki funkcji kwadratowej</h2>
+    <script type="text/javascript">
+        let a = Number(prompt("Podaj a; Wartość większa od 0"));
+        if(a == 0)
+        {
+            document.write("<p><b>Wartość a nie może być równa 0</b>; Wprowadź inną wartość</p>");
+        }
+        else
+        {
+            let b = Number(prompt("Podaj b"));
+            let c = Number(prompt("Podaj c"));
+            // Delta
+            delta = Math.pow(b,2) - 4 * a * c;
+            document.write("delta = " + delta + "<br>");
+            // Wierzchołki
+            let p = -b / (2 * a);
+            let q = -delta / (4 * a);
+            document.write("<p><b>Wierzchołki:</b><br> p = " + p + "<br> q = " + q + "<br></p>");
+        }
+    </script>
+</body>
+</html>
