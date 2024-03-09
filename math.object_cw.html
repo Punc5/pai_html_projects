@@ -8,34 +8,33 @@
 <body>
     <h2>Wyniki dla podanej wartości x</h2>
     <script type="text/javascript">
+        // Pobranie liczby x od użytkownika
         let x = Number(prompt("Podaj x"));
         let wynik = 0;
 
-        if (isNaN(x)) 
-        {
+        // Sprawdzenie, czy podane dane są liczbą
+        if (isNaN(x)) {
+            // Wyświetlenie komunikatu o błędzie, gdy x nie jest liczbą
             document.write("Wprowadź liczbę");
-        } 
-        else 
-        {
-            if (x == 0) 
-            {
+        } else {
+            // Obliczenie wyniku w zależności od wartości x
+            if (x == 0) {
+                // Dla x równego 0
                 wynik = Math.abs(x + 2);
-            } 
-            else if (x == 5) 
-            {
+            } else if (x == 5) {
+                // Dla x równego 5
                 wynik = Math.sqrt(Math.pow(x, 3) + 1);
-            } 
-            else 
-            {   
-                if (x > -10 && x < 4) 
-                {
+            } else {   
+                // Dla pozostałych wartości x
+                if (x > -10 && x < 4) {
+                    // Dla x od -10 do 4 (z wyłączeniem 4)
                     wynik = Math.pow(x, 3) + 3;
-                } 
-                else 
-                {
+                } else {
+                    // Dla pozostałych wartości x
                     wynik = x;
                 }
             }
+            // Wyświetlenie wyniku
             document.write("wynik = " + wynik);
         }
     </script>

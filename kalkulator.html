@@ -8,42 +8,48 @@
 <body>
     <h2>Kalkulator</h2>
     <script type="text/javascript">
+        // Pobranie danych od użytkownika
         let x = Number(prompt("Podaj x"));
         let y = Number(prompt("Podaj y"));
-        if(isNaN(x) || isNaN(y))
-        {
+
+        // Sprawdzenie czy podane dane są liczbami
+        if (isNaN(x) || isNaN(y)) {
+            // Wyświetlenie komunikatu o błędzie, gdy dane nie są liczbami
             document.write("<p><b>Nieprawidłowe dane</b>. Podaj poprawne liczby</p>");
-        }
-        else
-        {
+        } else {
+            // Wyświetlenie wartości x i y
             document.write("x = " + x + "<br>")
             document.write("y = " + y + "<br>")
+
             // Dodawanie
-            suma = x + y;
+            let suma = x + y;
             document.write("x + y = " + suma + "<br>");
+
             // Odejmowanie
-            roznica = x - y;
+            let roznica = x - y;
             document.write("x - y = " + roznica + "<br>");
+
             // Mnożenie
-            iloczyn = x * y;
+            let iloczyn = x * y;
             document.write("x * y = " + iloczyn + "<br>");
+
             // Sprawdzenie, czy y nie jest równe 0
-            if(y !== 0 )
-            {
+            if (y !== 0) {
                 // Dzielenie
-                iloraz = x / y;
+                let iloraz = x / y;
                 document.write("x / y = " + iloraz + "<br>");
-            }
-            else
-            {
+            } else {
+                // Wyświetlenie komunikatu o niemożliwości dzielenia przez 0
                 document.write("<p><b>Nie można dzielić przez 0</b>; Podaj y różne od 0</p>");
             }
-            // Kwadrat
-            kwadrat = Math.pow(x,2);
-            document.write("kwadrat liczby = " + kwadrat + "<br>");
-            // Sześcian
-            szescian = Math.pow(x,3);
-            document.write("sześcian liczby = " + szescian + "<br>");
+
+            // Obliczenie kwadratu liczby
+            let kwadrat = Math.pow(x, 2);
+            document.write("Kwadrat liczby = " + kwadrat + "<br>");
+
+            // Obliczenie sześcianu liczby
+            let szescian = Math.pow(x, 3);
+            document.write("Sześcian liczby = " + szescian + "<br>");
         }
     </script>
 </body>
