@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for - pętla</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Poproszenie użytkownika o podanie pierwszej i ostatniej liczby
+        let start = Number(prompt("Od jakiej liczby zacząć pętlę?"));
+        let koniec = Number(prompt("Na której liczbie zakończyć pętlę?"));
+
+        // Pętla od podanej pierwszej do ostatniej liczby
+        for (let i = start; i <= koniec; i++) {
+            // Jeśli nie jest to ostatnia liczba, dodaj przecinek
+            if (i < koniec) {
+                document.write(i + ", ");
+            } else {
+                // Jeśli jest to ostatnia liczba, nie dodawaj przecinka
+                document.write(i);
+            }
+        }
+    </script>
+</body>
+</html>

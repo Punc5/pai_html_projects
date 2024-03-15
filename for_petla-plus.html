@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>for - ćwiczenia pętli</title>
+    <title>for - pętla zaawansowana</title>
 </head>
 <body>
     <script type="text/javascript">
-        // Poproszenie użytkownika o podanie pierwszej liczby
+        // Poproszenie użytkownika o podanie pierwszej i ostatniej liczby
         let start = Number(prompt("Od jakiej liczby zacząć pętlę?"));
         let koniec = Number(prompt("Na której liczbie zakończyć pętlę?"));
-        
+            
         // Sprawdzenie, czy start jest liczbą
         if (isNaN(start)) {
             document.write("Podana wartość nie jest liczbą");
         } else {
-            for (let i = start; i <= koniec; i++) {
+            for (let i = start; i <= koniec; i++) { // Pętla od podanej pierwszej do ostatniej liczby
                 if (i > start && i < koniec) {
-                    document.write(i + " (+1) <br>"); 
+                    document.write("<b>" + i + "</b>" + " (+1) <br>"); 
                 } else {
-                    document.write(i + "<br>");
+                    document.write("<b>" + i + "</b>" + "<br>");
                 }
             }
         }
