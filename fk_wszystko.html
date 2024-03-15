@@ -38,14 +38,14 @@
                 let pierwiastek2 = (-b - Math.sqrt(delta)) / (2 * a);
                 document.write("<p><b>Funkcja kwadratowa ma dwa pierwiastki:</b><br>" +
                                 "x<sub>1</sub> = " + pierwiastek1 + 
-                                "<br> x<sub>2</sub> = " + pierwiastek2 + "<br></p>");
+                                "<br>x<sub>2</sub> = " + pierwiastek2 + "<br></p>");
             } else if(delta == 0) {
                 // Oblicz jedno miejsce zerowe
                 let pierwiastek0 = -b / (2 * a);
                 document.write("<p><b>Funkcja kwadratowa ma jeden pierwiastek:</b><br>" + " x<sub>0</sub> = " + pierwiastek0 + "<br>");
             } else {
                 // Wyświetl komunikat, gdy delta jest mniejsza od zera
-                document.write("<p><b>Funkcja kwadratowa nie ma pierwiastków</b>; Delta jest mniejsza od 0</p>" + "<br>");
+                document.write("<p><b>Funkcja kwadratowa nie ma pierwiastków</b>; Delta jest mniejsza od 0</p><br>");
             }
         }       
     </script>
