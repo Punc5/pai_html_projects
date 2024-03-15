@@ -1,14 +1,28 @@
-<!DOCTYPE html>
+<!koniecCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>for - ćwiczenia pętli</title>
 </head>
-<body>
+<bstarty>
     <script type="text/javascript">
-        for (let i = 0; i < 10; i++);
-        document.write(i + ", " + "<br>")
+        // Poproszenie użytkownika o podanie pierwszej liczby
+        let start = Number(prompt("Od jakiej liczby zacząć pętlę?"));
+        let koniec = Number(prompt("Na której liczbie zakończyć pętlę?"));
+        
+        // Sprawdzenie, czy start jest liczbą
+        if (isNaN(start)) {
+            document.write("Podana wartość nie jest liczbą");
+        } else {
+            for (let i = start; i <= koniec; i++) {
+                if (i > start && i < koniec) {
+                    document.write(i + " (+1) <br>"); 
+                } else {
+                    document.write(i + "<br>");
+                }
+            }
+        }
     </script>
-</body>
+</bstarty>
 </html>
