@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawdzenie trójkąta</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Pobranie długości boków od użytkownika
+        let a = parseFloat(prompt("Podaj długość boku a"));
+        let b = parseFloat(prompt("Podaj długość boku b"));
+        let c = parseFloat(prompt("Podaj długość boku c"));
+
+        // Sprawdzenie warunku trójkąta
+        if (czyMoznaZbudowacTrojkat(a, b, c)) {
+            document.write("Można zbudować trójkąt o podanych bokach.");
+        } else {
+            document.write("Nie można zbudować trójkąta o podanych bokach.");
+        }
+
+        // Funkcja sprawdzająca warunek trójkąta
+        function czyMoznaZbudowacTrojkat(a, b, c) {
+            return a + b > c && a + c > b && b + c > a;
+        }
+    </script>
+</body>
+</html>
