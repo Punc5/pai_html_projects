@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczanie sumy serii liczbowej</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let k = 2;
+        let suma = 0;
+
+        for(let i = 1; i <= 10; i++) {
+            if(i % 2 == 0) {
+                suma = suma + k;
+            } else {
+                suma = suma + (-k);
+            }
+            k = k + 3;
+        }
+        document.write("Wynik sumy serii = " + suma);
+    </script>
+</body>
+</html>
