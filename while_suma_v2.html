@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While - suma (wersja 2)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let n = Number(prompt("Podaj liczbę"));
+
+        let liczba = 2;
+        let liczba1 = 4;
+        let suma = 0;
+
+        let i = 1;
+        while (i <= n) {
+            suma += liczba + (liczba1 / n);
+            liczba1 *= 2;
+            i++;
+        }
+        document.write(suma);
+    </script>
+</body>
+</html>
