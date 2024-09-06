@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pętla</title>
+</head>
+<body>
+    <script>
+        // Napisz skrypt, w którym pobierzesz od użytkownika dwie liczby dodatnie a następnie obliczysz sumę tych dwóch liczb. Użyj pętli "do while" do błędnego podania wartości liczbowej przez użytkownika
+
+        /*
+        let a = 0;
+        let b = 0;
+
+        let suma = 0;
+
+        do
+            {
+                a = Number(prompt("Podaj liczbę a"))
+                b = Number(prompt("Podaj liczbę b"))
+                suma = a + b
+            }
+        while((a <= 0) || (b <= 0))
+
+        document.write("Suma = " + suma);
+        */
+
+        // Napisz skrypt, który za pomocą "do while" obliczy iloczyn z podanych przez użytkownika wartości liczbowych. Podawanie liczb powinno zakończyć się w momencie, gdy iloczyn przekroczy wartość sto tysięcy
+
+        let a = 1
+        let b = 1
+
+        let iloczyn = 1
+
+        do
+            {
+                a = Number(prompt("Podaj liczbę a"))
+                b = Number(prompt("Podaj liczbę b"))
+                iloczyn = a * b
+            }
+        while(a * b <= 100000);
+
+        document.write("Iloczyn = " + iloczyn);
+    </script>
+</body>
+</html>
