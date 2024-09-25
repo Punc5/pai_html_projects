@@ -24,7 +24,17 @@
         }
         let v = drugaFunkcja(8, 5);
         document.write("<br>iloczyn = " + v);
-        
+
+        // Napisz skrypt, w którym:
+        // * zdefiniujesz funkcję obliczającą i zwracającą wartość wyrażenia;
+        // * wywołaj funkcję dla kilka parametrów.
+        function funkcjaX(x, y)
+        {
+            let f = (Math.pow(x, 2) + 2 * Math.pow(x, 3)) + (Math.sqrt(x + y));
+            return f;
+        }
+        let k = funkcjaX(3, 4);
+        document.write("<br>funkcja = " + k);
     </script>
 </body>
 </html>
