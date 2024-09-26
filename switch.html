@@ -19,30 +19,36 @@
         }
         
         // Napisz skrypt, w którym:
-        // * za pomocą instrukcji switch zbudujesz kalkulator wykonujący następujące działania: d-dodawanie, o-odejmowanie, m-mnożenie, z-dzielenie dla dwóch podanych liczb
-    let działanie = prompt("Proszę podać działanie d-dodawanie, o-odejmowanie, m-mnożenie, lub z-dzielenie");
-    let a = (Number(prompt("Podaj liczbę a: ")));
-    let b = (Number(prompt("Podaj liczbę b: ")));
-    let wynik = 0;
+        // * za pomocą instrukcji switch zbudujesz kalkulator wykonujący następujące działania: 
+        //  - d - dodawanie; 
+        //  - o - odejmowanie; 
+        //  - m - mnożenie; 
+        //  - z - dzielenie (dla dwóch podanych liczb).
+        let dzialanie = prompt("Proszę podać działanie; d - dodawanie, o - odejmowanie, m - mnożenie, z - dzielenie");
+        let a = (Number(prompt("Podaj liczbę a: ")));
+        let b = (Number(prompt("Podaj liczbę b: ")));
+        let wynik = 0;
    
-    switch(działanie)
-    {
-        case "d": wynik=a+b
-        document.write("Wynik to "+ wynik)
-       break;
-        case "o": wynik=a-b
-       document.write("Wynik to "+ wynik)
-        break;
-        case "m": wynik=a*b
-        document.write("Wynik to "+ wynik)
-        break;
-        case "z": wynik=a/b
-        if(b!=0)
-     /* document.write("Wynik to "+ wynik)
-       else document.write("Nie dzielimy przez 0")
-       break;
-      default: document.write("Niepoprawna opcja")
-    }
+        switch(działanie)
+        {
+            case "d": wynik = a + b;
+            document.write("Wynik to "+ wynik);
+            break;
+            case "o": wynik = a - b;
+            document.write("Wynik to "+ wynik);
+            break;
+            case "m": wynik = a * b;
+            document.write("Wynik to "+ wynik);
+            break;
+            case "z": wynik = a / b;
+            if(b != 0);
+            /*
+            document.write("Wynik to "+ wynik);
+            else document.write("Nie dzielimy przez 0");
+            break;
+            default: document.write("Niepoprawna opcja");
+            */
+        }
     </script>
 </body>
 </html>
