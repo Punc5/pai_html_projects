@@ -9,15 +9,15 @@
     <h2>Pierwiastki funkcji kwadratowej</h2>
     <script type="text/javascript">
         // Napisz skrypt, w którym:
-        // - pobierzesz od użytkownika wartości a, b i c
-        // - obliczysz deltę i miejsca zerowe
+        // - pobierzesz od użytkownika współczynniki funkcji kwadratowej: a, b i c;
+        // - obliczysz deltę i miejsca zerowe.
 
         // Pobranie współczynnika a od użytkownika
         let a = Number(prompt("Podaj a; Wartość większa od 0"));
 
-        // Sprawdzenie czy a nie jest równe 0
+        // Sprawdzenie czy współczynnik a nie jest równe 0
         if (a == 0) {
-            // Wyświetlenie komunikatu o błędzie, gdy a jest równe 0
+            // Wyświetlenie komunikatu o błędzie, gdy współczynnik a jest równe 0
             document.write("<p><b>Nie możemy obliczyć funkcji kwadratowej z podanymi danymi.</b> Przyczyną może być:</p>" + 
                             "1) Wprowadzenie 0 jako współczynnik a (a ≠ 0, b i c = 0)<br>" +
                             "2) Brak podanych danych (współczynniki)");

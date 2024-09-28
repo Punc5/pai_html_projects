@@ -19,11 +19,12 @@
         }
         
         // Napisz skrypt, w którym:
-        // * za pomocą instrukcji switch zbudujesz kalkulator wykonujący następujące działania: 
-        //  - d - dodawanie; 
-        //  - o - odejmowanie; 
-        //  - m - mnożenie; 
-        //  - z - dzielenie (dla dwóch podanych liczb).
+        // - za pomocą instrukcji switch zbudujesz kalkulator wykonujący następujące działania: 
+        //  * d - dodawanie; 
+        //  * o - odejmowanie; 
+        //  * m - mnożenie; 
+        //  * z - dzielenie (dla dwóch podanych liczb).
+
         let dzialanie = prompt("Proszę podać działanie; d - dodawanie, o - odejmowanie, m - mnożenie, z - dzielenie");
         let a = (Number(prompt("Podaj liczbę a: ")));
         let b = (Number(prompt("Podaj liczbę b: ")));
@@ -31,23 +32,36 @@
    
         switch(działanie)
         {
-            case "d": wynik = a + b;
-            document.write("Wynik to "+ wynik);
-            break;
-            case "o": wynik = a - b;
-            document.write("Wynik to "+ wynik);
-            break;
-            case "m": wynik = a * b;
-            document.write("Wynik to "+ wynik);
-            break;
-            case "z": wynik = a / b;
-            if(b != 0);
-            /*
-            document.write("Wynik to "+ wynik);
-            else document.write("Nie dzielimy przez 0");
-            break;
-            default: document.write("Niepoprawna opcja");
-            */
+            case "d": 
+                wynik = a + b;
+                document.write("suma: "+ wynik);
+                break;
+
+            case "o": 
+                wynik = a - b;
+                document.write("różnica: "+ wynik);
+                break;
+                
+            case "m": 
+                wynik = a * b;
+                document.write("iloczyn: "+ wynik);
+                break;
+
+            case "z":
+                if(b != 0)
+                {
+                    wynik = a / b;
+                    document.write("iloraz: "+ wynik);
+                }
+                else
+                {
+                document.write("Nie dzielimy przez 0");
+                }
+                break;
+
+            default: 
+                document.write("Niepoprawna opcja");
+                break;
         }
     </script>
 </body>

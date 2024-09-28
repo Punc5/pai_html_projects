@@ -9,19 +9,19 @@
     <h2>Funkcja kwadratowa - Delta, wierzchołki i miejsca zerowe</h2>
     <script type="text/javascript">
         // Napisz skrypt, w którym:
-        // - pobierzesz od użytkownika wartości a, b i c
-        // - obliczysz deltę, wierzchołki i miejsca zerowe
-        
+        // - pobierzesz od użytkownika współczynniki funkcji kwadratowej: a, b i c;
+        // - obliczysz deltę, wierzchołki i miejsca zerowe.
+
         let a = Number(prompt("Podaj a; Wartość większa od 0"));
 
         // Sprawdź, czy a nie jest równe 0
         if(a == 0) {
-            // Wyświetl komunikat o błędzie, gdy a jest równe 0
+            // Wyświetl komunikat o błędzie, gdy współczynnik a jest równe 0
             document.write("<p><b>Nie możemy obliczyć funkcji kwadratowej z podanymi danymi.</b> Przyczyną może być:</p>" + 
                             "1) Wprowadzenie 0 jako współczynnik a (a ≠ 0, b i c = 0)<br>" +
                             "2) Brak podanych danych (współczynniki)");
         } else {
-            // Jeśli a nie jest równe 0, pobierz wartości b i c od użytkownika
+            // Jeśli a nie jest równe 0, pobierz współczynniki b i c od użytkownika
             let b = Number(prompt("Podaj b"));
             let c = Number(prompt("Podaj c"));
 
