@@ -8,6 +8,7 @@
 <body>
     <script type="text/javascript">
         // Funkcja sumy a i b
+        /*
         function pierwszaFunkcja(a, b)
         {
             let s = a + b;
@@ -29,8 +30,8 @@
         // - zdefiniujesz funkcję obliczającą i zwracającą wartość wyrażenia;
         // - wywołaj funkcję dla kilka parametrów.
 
-        let a = Number(prompt("<br>Podaj a:"))
-        let b = Number(prompt("<br>Podaj b:"))
+        let a1 = Number(prompt("<br>Podaj a:"))
+        let b1 = Number(prompt("<br>Podaj b:"))
         
         function funkcjaX(x, y)
         {
@@ -38,7 +39,8 @@
             return f;
         }
         let k = funkcjaX(a, b);
-        document.write("<br>funkcja = " + k);
+        document.write("<br>funkcja dla x = " + k);
+        */
 
         // Napisz skrypt, w którym zdefiniujesz:
         // - funkcję wyznaczającą i rozwiązającą równanie równań;
@@ -47,10 +49,42 @@
         
         let x = Number(prompt("<br>Podaj x:"))
 
-        function funkcjaX2(x)
+        function funkcjaKwadratowa(a, b, c) 
         {
-            
+            let delta = b * b - 4 * a * c;
+            if (delta > 0) 
+            {
+                let x1 = (-b - Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b + Math.sqrt(delta)) / (2 * a);
+                return "Funkcja ma dwa rozwiązania: x1 = ${x1}, x2 = ${x2}";
+            } 
+            else if (delta === 0) 
+            {
+                let x0 = -b / (2 * a);
+                return "Funkcja ma jedno rozwiązanie: x0 = ${x0}";
+            } 
+            else 
+            {
+                return "Funkcja nie ma rozwiązań w zbiorze liczb rzeczywistych";
+            }
         }
+
+        // Funkcja wyświetlająca ciąg znaków
+        function wyswietlCiagZnakow(ciag) 
+        {
+            document.write(ciag + "<br>");
+        }
+
+        // Pobierz wartości współczynników a, b, c
+        let a2 = Number(prompt("Podaj wartość a (różną od zera):"));
+        let b2 = Number(prompt("Podaj wartość b:"));
+        let c2 = Number(prompt("Podaj wartość c:"));
+
+        // Wywołaj funkcję rozwiązującą równanie kwadratowe
+        let wynik = rozwiazRownanieKwadratowe(a, b, c);
+
+        // Wywołaj funkcję wyświetlającą wynik
+        wyswietlCiagZnakow(wynik);
     </script>
 </body>
 </html>
