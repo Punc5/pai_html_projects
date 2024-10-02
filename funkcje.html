@@ -46,9 +46,17 @@
         // - funkcję wyznaczającą i rozwiązającą równanie równań;
         // - funkcję wyświetlającą ciąg znaków;
         // - wywołaj funkcję.
-        
         let x = Number(prompt("<br>Podaj x:"))
 
+        function funkcjaX2(x)
+        {
+            let x = Number(prompt("<br>Podaj x:"));
+        }
+
+        let a2 = Number(prompt("Podaj wartość a (różną od zera):"));
+        let b2 = Number(prompt("Podaj wartość b:"));
+        let c2 = Number(prompt("Podaj wartość c:"));
+            
         function funkcjaKwadratowa(a, b, c) 
         {
             let delta = b * b - 4 * a * c;
@@ -58,7 +66,7 @@
                 let x2 = (-b + Math.sqrt(delta)) / (2 * a);
                 return "Funkcja ma dwa rozwiązania: x1 = ${x1}, x2 = ${x2}";
             } 
-            else if (delta === 0) 
+                else if (delta === 0) 
             {
                 let x0 = -b / (2 * a);
                 return "Funkcja ma jedno rozwiązanie: x0 = ${x0}";
@@ -67,23 +75,14 @@
             {
                 return "Funkcja nie ma rozwiązań w zbiorze liczb rzeczywistych";
             }
-        }
+        }          
+        let mz = funkcjaKwadratowa(a2, b2, c2);
+        document.write("Funkcja kwadratowa ma następujące rozwiązania: " + mz + "<br>");
 
-        // Funkcja wyświetlająca ciąg znaków
         function wyswietlCiagZnakow(ciag) 
         {
             document.write(ciag + "<br>");
         }
-
-        // Pobierz wartości współczynników a, b, c
-        let a2 = Number(prompt("Podaj wartość a (różną od zera):"));
-        let b2 = Number(prompt("Podaj wartość b:"));
-        let c2 = Number(prompt("Podaj wartość c:"));
-
-        // Wywołaj funkcję rozwiązującą równanie kwadratowe
-        let wynik = rozwiazRownanieKwadratowe(a, b, c);
-
-        // Wywołaj funkcję wyświetlającą wynik
         wyswietlCiagZnakow(wynik);
     </script>
 </body>
