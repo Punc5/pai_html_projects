@@ -41,7 +41,7 @@
         let k = funkcjaX(a1, b1);
         document.write("<br>funkcja dla x = " + k);
         */
-
+       
         // Napisz skrypt, w którym zdefiniujesz:
         // - funkcję wyznaczającą i rozwiązującą równanie kwadratowe;
         // - funkcję wyświetlającą ciąg znaków;
@@ -86,65 +86,6 @@
 
         // Wywołaj funkcję wyświetlającą wynik
         wyswietlCiagZnakow(wynik);
-
-        let wynik = function(a, b)
-        {
-            let c;
-            c = a - b;
-            return c;
-        }
-        document.write("wynik = " + wynik(8, 2));
-
-        // Napisz skrypt, w którym utworzysz:
-        // - funkcję anonimowa, czy z trzech podanych wartości można zbudować trójkąt;
-        // - funkcję anonimową sprwadzającą wartość wyrażenia dla przekazanej wartości n = 2, 4, 8, 16, 32, 64, ... .
-
-        let a = Number(prompt("Długość boku a"));
-        let b = Number(prompt("Długość boku b"));
-        let c = Number(prompt("Długość boku c"));
-
-        let czyMoznaZbudowacTrojkat = function(a, b, c)
-        {
-            return a + b > c && a + c > b && b + c > a;
-        }
-
-        if(czyMoznaZbudowacTrojkat(a, b, c))
-        {
-            document.write("<b>Można zbudować trójkąt.</b><br>");
-        }
-        else
-        {
-            document.write("<b>Nie można zbudować trójkąta.</b><br>")
-        }
-
-        document.write("a = " + a + "<br>");
-        document.write("b = " + b + "<br>");
-        document.write("c = " + c + "<br>");
-
-        let wynik = () => 
-        {
-            document.write("Funkcja strzałkowa");
-        }
-        wynik ();
-
-        let suma (a, b) =>
-        {
-            let c = a + b;
-            return c;
-        }
-        document.write(suma(5, 8));
-        */
-
-        // Napisz skrypt, w którym utworzysz:
-        // - funkcję strzałkową obliczającą i zwracającą wartość wyrażenia 2 * 4 * 8 * 16 * 32 * ... ;
-        // - funkcję strzałkową wyświetlającą imię i nazwisko podane jako parametry funkcji.
-
-        let iloczyn = (a, b) =>
-        {
-            let c = a * b;
-            return c;
-        }
-        document.write(iloczyn(2 * Math.pow(2, 2)));
     </script>
 </body>
 </html>
