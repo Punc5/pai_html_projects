@@ -98,12 +98,11 @@
             let s = 0;
             for(let i = 1; i <= n; i++)
             {
-                s = s + i;
+                s =+ i;
             }
             return (2 * n) / s;
         }
         document.write("wynik = " + wyrazenie(n) + "<br>");
-        */
 
         // Funkcja strzałkowa - b)
 
@@ -115,21 +114,32 @@
             let i = 1;
             
             do
-            {
+            {   
                 if(i % 2 == 0)
                 {
-                    document.write(x);
+                    document.write(x + ", ");
                     x -= 1;
                 }
                 else
                 {
-                    document.write(x);
+                    document.write(x + ", ");
                     x += 2;
                 }
                 i++;
             }
             while (i <= n)
         }
+
+        ciagLiczb(n);
+        */
+
+        let a = parseInt(prompt("Podaj liczbę całkowitą"));
+        let b = parseFloat(prompt("Podaj liczbę całkowitą"));
+        let c = isNaN(prompt("Podaj wartość, która nie jest liczbą"));
+
+        document.write("a = " + a + "<br>");
+        document.write("b = " + b + "<br>");
+        document.write("c = " + c + "<br>");
     </script>
 </body>
 </html>
