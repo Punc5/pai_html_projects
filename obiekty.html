@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Obiekty - ćwiczenia</title>
 </head>
 <body>
     <script type="text/javascript">
@@ -28,7 +28,6 @@
 
         monitor_1.model = 'V48852'
         document.write(monitor_1.model + "<br>");
-        */
 
         // Napisz skrypt, w którym utworzysz obiekt sklep o właściwościach: nazwa, adres, właściciel, branża, ilość asortymentu.
         // Ponadto zdefiniujesz metodę wyświetlającą dane obiekty.
@@ -42,12 +41,31 @@
 
             informacje: function()
             {
-                document.write(sklep);
+                document.write("nazwa: " + sklep.nazwa + "<br>" + "adres: " + sklep.adres + "<br>" + "właściciel: " + sklep.wlasciciel + "<br>" + "branża: " + sklep.branza + "<br>" + "ilość asortymentu: " + sklep.ilosc_asortymentu + "<br>");
             }
-
-            sklep.informacje(nazwa);
-            document.write(sklep.informacje + "<br>");
         }
+
+        sklep.informacje();
+        */
+       
+        function sklep (knazwa, kadres, kwlasciciel, kbranza, kilosc_asortymentu)
+        {
+            this.nazwa = knazwa;
+            this.branza = kbranza;
+            this.adres = kadres;
+            this.wlasciciel = kwlasciciel;
+            this.branza = kbranza;
+            this.ilosc_asortymentu = kilosc_asortymentu;
+        
+            this.wyswietl = function()
+            {
+                document.write("nazwa: " + this.nazwa + "<br>", "adres: " + this.adres + "<br>", "właściciel: " + this.wlasciciel + "<br>", "branża: " + this.branza + "<br>", "ilość asortymentu: " + this.ilosc_asortymentu + "<br>");
+            }
+        }
+
+        let sk = new sklep("Biedronka", "Szkolna 24a", "Z.Z", "Spożywcza", "30000");
+
+        sk.wyswietl();
     </script>
 </body>
 </html>
