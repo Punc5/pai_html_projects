@@ -24,10 +24,15 @@
         document.write(cz4 + "<br>");
 
         // Wywołanie obiektów używając document.write()
-        document.write("<p><b>Kalendarz:</b></p>");
-        document.write("Jest teraz czas: " + "0" + czas.getHours() + ":", czas.getMinutes() + ":", czas.getSeconds() + "<br>");
-        document.write("Data: " + czas.getDate() + ".", czas.getMonth() + 1 + ".", czas.getFullYear() + " r." + "<br>")
-
+        function Czas()
+        {
+            document.write("<p><b>Kalendarz:</b></p>");
+            document.write("Jest teraz czas: " + "0" + czas.getHours() + ":", czas.getMinutes() + ":", czas.getSeconds() + "<br>");
+            document.write("Data: " + czas.getDate() + ".", czas.getMonth() + 1 + ".", czas.getFullYear() + " r." + "<br>");
+        }
+        setInterval(() => {
+            Czas()}, 1000);
+        
         // Konkretny czas
         getDate()
         getDay()
