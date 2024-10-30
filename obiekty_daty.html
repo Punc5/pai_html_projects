@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiekty daty - ćwiczenia</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Obiekty daty wbudowane
+        document.write("<p><b>Daty wbudowane:</b></p>");
+        let czas = new Date();
+        
+        let cz1 = czas.toString();
+        document.write(cz1 + "<br>");
+
+        let cz2 = czas.toLocaleString();
+        document.write(cz2 + "<br>");
+
+        let cz3 = czas.toGMTString();
+        document.write(cz3 + "<br>");
+
+        let cz4 = czas.toTimeString();
+        document.write(cz4 + "<br>");
+
+        // Wywołanie obiektów używając document.write()
+        document.write("<p><b>Kalendarz:</b></p>");
+        document.write("Jest teraz czas: " + "0" + czas.getHours() + ":", czas.getMinutes() + ":", czas.getSeconds() + "<br>");
+        document.write("Data: " + czas.getDate() + ".", czas.getMonth() + 1 + ".", czas.getFullYear() + " r." + "<br>")
+
+        // Konkretny czas
+        getDate()
+        getDay()
+        getYear()
+        getFullYear()
+        getHours()
+        getMiliseconds()
+        getMinutes()
+        getMonth()
+        getSeconds()
+        getTime()
+    </script>
+</body>
+</html>
