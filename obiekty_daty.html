@@ -8,6 +8,7 @@
 <body>
     <script type="text/javascript">
         // Obiekty daty wbudowane
+        /*
         document.write("<p><b>Daty wbudowane:</b></p>");
         let czas = new Date();
         
@@ -26,13 +27,54 @@
         // Wywołanie obiektów używając document.write()
         function Czas()
         {
-            document.write("<p><b>Kalendarz:</b></p>");
-            document.write("Jest teraz czas: " + "0" + czas.getHours() + ":", czas.getMinutes() + ":", czas.getSeconds() + "<br>");
+            let czas = new Date
+            
+            let godzina = czas.getHours()
+            let minuta = czas.getMinutes()
+            let sekunda = czas.getSeconds()
+
+            document.write("Jest teraz czas: ");
+            if(godzina < 10)
+            {
+                document.write("0" + godzina + ":");
+            }
+            else
+            {
+                document.write(godzina + ":");
+            }
+
+            if(minuta < 10)
+            {
+                document.write("0" + minuta + ":");
+            }
+            else
+            {
+                document.write(minuta + ":");
+            }
+
+            if(sekunda < 10)
+            {
+                document.write("0" + sekunda + "<br>");
+            }
+            else
+            {
+                document.write(sekunda + "<br>");
+            }
+
+            // document.write("<p><b>Kalendarz:</b></p>");
+            // document.write("Jest teraz czas: " + godzina + ":", minuta + ":", sekunda + "<br>");
             document.write("Data: " + czas.getDate() + ".", czas.getMonth() + 1 + ".", czas.getFullYear() + " r." + "<br>");
         }
         setInterval(() => {
             Czas()}, 1000);
+        */
+
+        // Rok, miesiąc, dzień, godzina, minuta, sekunda
+        let czas = new Date(2008, 4, 12, 15, 24, 10);
+        // document.write(czas.ToString());
         
+        czas.setYear(1999)
+        document.write(czas.getYear())
         // Konkretny czas
         getDate()
         getDay()
