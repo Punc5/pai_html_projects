@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do ... while - pętla (część 2.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, który za pomocą "do while":
+        // - obliczy iloczyn z podanych przez użytkownika wartości liczbowych;
+        // - podawanie liczb powinno zakończyć się w momencie, gdy iloczyn przekroczy wartość 100000.
+        
+        let iloczyn = 1;
+
+        do {
+            let a = Number(prompt("Podaj liczbę a (mnożnik):"));
+            let b = Number(prompt("Podaj liczbę b (mnożnik):"));
+
+            iloczyn *= (a * b);
+
+        } while(iloczyn <= 100000 && (a > 0 && b > 0));
+
+        document.write("iloczyn = " + iloczyn);
+    </script>
+</body>
+</html>

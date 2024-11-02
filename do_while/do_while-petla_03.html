@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do ... while - pętla (część 3.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Pętla do while, która zapewnia, że użytkownik wprowadza liczby większe od 0
+
+        let suma = 0;
+
+        let a = 0;
+        let b = 0;
+        
+        do {
+            a = Number(prompt("Podaj liczbę a (więcej niż 0): "));
+            b = Number(prompt("Podaj liczbę b (więcej niż 0): "));
+        } while((a <= 0) || (b <= 0));
+
+        suma = a + b;
+
+        document.write("suma =" + suma);
+    </script>
+</body>
+</html>

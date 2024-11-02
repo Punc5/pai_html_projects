@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcje (część 3.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - zdefiniujesz funkcję obliczającą i zwracającą wartość wyrażenia;
+        // - wywołaj funkcję dla kilku parametrów.
+
+        let a = Number(prompt("Podaj a:"))
+        let b = Number(prompt("Podaj b:"))
+        
+        function funkcjaX(x, y) {
+            let f = (Math.pow(x, 2) + 2 * Math.pow(x, 3)) + (Math.sqrt(x + y));
+            return f;
+        }
+        let wynik = funkcjaX(a, b);
+        document.write("wartość funkcji dla a = " + a + " oraz b = " + b + " wynosi: " + wynik);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcja strzałkowa (część 3.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym zdefiniujesz funkcje strzałkowe:
+        // a) obliczającą i zwracającą wartość wyrażenia;
+        // b) wyświetlającą podany ciąg znaków: 3, 5, 4, 6, 5, 7, 6, 8, 7, ...
+
+        // funkcja strzałkowa - a)
+        let n = Number(prompt("Podaj wartość n:"));
+
+        let wyrazenie = (n) =>
+        {
+            let s = 0;
+            for(let i = 1; i <= n; i++)
+            {
+                s += i;
+            }
+            return (2 * n) / s;
+        }
+        document.write("wynik = " + wyrazenie(n) + "<br>");
+
+        // funkcja strzałkowa - b)
+        let m = Number(prompt("Podaj wartość m:"));
+
+        let ciagLiczb = (m) =>
+        {
+            let x = 3;
+            let i = 1;
+            
+            do {   
+                document.write(x + ", ");
+                if(i % 2 == 0) {
+                    x -= 1;
+                } else {
+                    x += 2;
+                }
+                i++;
+            } while(i <= m);
+        }
+
+        ciagLiczb(m);
+    </script>
+</body>
+</html>

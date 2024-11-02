@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcja strzałkowa (część 2.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym utworzysz:
+        // - funkcję strzałkową obliczającą i zwracającą wartość wyrażenia 2 * 4 * 8 * 16 * 32 * ... ;
+        // - funkcję strzałkową wyświetlającą imię i nazwisko podane jako parametry funkcji.
+        
+        let iloczynCiagu = (n) => 
+        {
+            let iloczyn = 1;
+            for(let i = 0; i < n; i++) 
+            {
+                iloczyn *= Math.pow(2, i + 1); // 2, 4, 8, 16, 32 ...
+            }
+            return iloczyn;
+        }
+        
+        let n = 5;
+        document.write("iloczyn pierwszych " + n + " elementów ciągu wynosi: " + iloczynCiagu(n) + "<br>");
+
+        let wyswietlImieNazwisko = (imie, nazwisko) => 
+        {
+            document.write("imię i nazwisko: " + imie + " " + nazwisko + "<br>");
+        }
+        wyswietlImieNazwisko("Kacper", "Ciombor");
+    </script>
+</body>
+</html>

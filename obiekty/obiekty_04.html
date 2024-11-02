@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekty - ćwiczenia</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - zdefiniujesz konstruktor województwo o parametrach: nazwa, adres, ilość powiatów, wojewoda, ilość jednostek, powierzchnia województwa;
+        // - metodę wprowadzającą, wyświetlającą dane obiektu oraz metodę sprwadzającą czy powierzchnia województwa przekracza 20000 km^2;
+        // - utwórz 3 obiekty i wywołaj dla nich metody.
+
+        function wojewodztwo(knazwa, kadres, kilosc_powiatow, kwojewoda, kilosc_jednostek, kpowierzchnia) {
+            this.nazwa = ""
+            this.adres = ""
+            this.ilosc_powiatow = ""
+            this.wojewoda = ""
+            this.ilosc_jednostek = ""
+            this.powierzchnia = "" 
+
+            this.wprowadz = function() {
+                this.nazwa = prompt("Podaj nazwę");
+                this.adres = prompt("Podaj adres");
+                this.ilosc_powiatow = prompt("Podaj adres");
+                this.wojewoda = prompt("Podaj adres");
+                this.ilosc_jednostek = prompt("Podaj ilosc powiatów");
+                this.powierzchnia = prompt("Podaj powierzchnię");
+
+                this.wyswietl = function() {
+                    document.write("województwo: " + this.nazwa + "<br>", "adres: " + this.adres + "<br>", "ilość powiatów: " + this.ilosc_powiatow + "<br>", "wojewoda: " + this.wojewoda + "<br>", "ilość jednostek: " + this.ilosc_jednostek + "<br>", "powierzchnia: " + this.powierzchnia + "<br>"); }
+            }
+        }
+
+        document.write("<p><b>Pierwsze województwo:</b></p>");
+        let w1 = new wojewodztwo();
+        w1.wprowadz();
+        w1.wyswietl();
+        if(w1.powierzchnia > 20000) {
+            document.write("Powierzchnia województwa przekracza 20 000 km^2" + "<br>"); 
+        } else {
+            document.write("Powierzchnia województwa <b>NIE</b> przekracza 20 000 km^2" + "<br>"); 
+        }
+        
+        document.write("<p><b>Drugie województwo:</b></p>");
+        let w2 = new wojewodztwo();
+        w2.wprowadz();
+        w2.wyswietl();
+        if(w2.powierzchnia > 20000) {
+            document.write("Powierzchnia województwa przekracza 20 000 km^2" + "<br>");
+        } else {
+            document.write("Powierzchnia województwa <b>NIE</b> przekracza 20 000 km^2" + "<br>");
+        }
+
+        document.write("<p><b>Trzecie województwo:</b></p>");
+        let w3 = new wojewodztwo();
+        w3.wprowadz();
+        w3.wyswietl();
+        if(w3.powierzchnia > 20000) {
+            document.write("Powierzchnia województwa przekracza 20 000 km^2" + "<br>");
+        } else {
+            document.write("Powierzchnia województwa <b>NIE</b> przekracza 20 000 km^2" + "<br>");
+        }
+    </script>
+</body>
+</html>

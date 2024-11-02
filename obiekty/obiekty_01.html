@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekty (część 1.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let monitor_1 = {
+            producent: 'AOC',
+            model: 'E2460S',
+            nr_seryjny: '852434',
+        
+            wlacz: function() {
+                document.write("Monitor uruchomiony" + "<br>"); },
+            wylacz: function() {
+                document.write("Monitor wyłączony" + "<br>"); }
+        }
+
+        monitor_1.wlacz();
+        monitor_1.wylacz();
+
+        monitor_1.model = 'V48852'
+        document.write(monitor_1.model + "<br>");
+    </script>
+</body>
+</html>

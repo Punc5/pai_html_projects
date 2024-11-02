@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do ... while - pętla (część 6.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, który: 
+        // - będzie obliczał iloczyn z 20 wylosowanych liczb z przedziału od 2 do 50 włącznie;
+        // - po wykonaniu pętli do while program ma wyświetlić iloczyn oraz największą wylosowaną liczbę.
+        
+        let iloczyn = 1;
+        
+        let i = 1;
+        let a = 0;
+        let max = 2;
+        
+        do {
+            a = Math.floor(Math.random() * (50 - 2 + 1)) + 2;
+            if(a > max) {
+                max = a;
+            }
+            iloczyn *= a; // iloczyn = iloczyn * a;
+            document.write(a + "<br>, ");
+            i++;
+        } while(i <= 20);
+
+        document.write("<br>iloczyn = " + iloczyn);
+        document.write("<br>max = " + max);
+    </script>
+</body>
+</html>

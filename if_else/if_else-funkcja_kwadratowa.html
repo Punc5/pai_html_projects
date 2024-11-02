@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if ... else - funkcja kwadratowa - kalkulator</title>
+</head>
+<body>
+    <h2>Funkcja kwadratowa - Delta, wierzchołki i miejsca zerowe</h2>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika współczynniki funkcji kwadratowej: a, b i c;
+        // - obliczysz deltę, wierzchołki i miejsca zerowe.
+
+        let a = parseFloat(prompt("Podaj a (Wartość większa od 0):"));
+
+        if(a <= 0) {
+            document.write("<div><b>Nie możemy obliczyć funkcji kwadratowej z podanymi danymi.</b> Przyczyną może być:</div>" + 
+                           "<div>1) Wprowadzenie 0 lub wartości ujemnej jako współczynnik a (a ≠ 0)<br>" +
+                           "2) Brak podanych danych (współczynniki)</div>");
+        } else {
+            let b = parseFloat(prompt("Podaj b:"));
+            let c = parseFloat(prompt("Podaj c:"));
+
+            let delta = Math.pow(b, 2) - 4 * a * c;
+            document.write("<div>Δ = " + delta + "</div>");
+
+            let p = -b / (2 * a);
+            let q = -delta / (4 * a);
+            document.write("<div><b>Wierzchołki x<sub>w</sub> i y<sub>w</sub>:</b><br> p = " + p + "<br> q = " + q + "</div>");
+
+            if(delta > 0) {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.write("<div><b>Funkcja kwadratowa ma dwa pierwiastki:</b><br>" +
+                               "x<sub>1</sub> = " + x1 + "<br>x<sub>2</sub> = " + x2 + "</div>");
+            } else if(delta === 0) {
+                let x0 = -b / (2 * a);
+                document.write("<div><b>Funkcja kwadratowa ma jeden pierwiastek:</b><br>x<sub>0</sub> = " + x0 + "</div>");
+            } else {
+                document.write("<div><b>Funkcja kwadratowa nie ma pierwiastków!</b><br>Delta jest mniejsza od 0.</div>");
+            }
+        }
+    </script>
+</body>
+</html>

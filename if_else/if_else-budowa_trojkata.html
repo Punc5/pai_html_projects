@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if ... else - budowa trójkata - kalkulator</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika długości boków: a, b i c;
+        // - sprawdzisz, czy można zbudować trójkąt o takich bokach.
+        
+        let a = parseFloat(prompt("Długość boku a"));
+        let b = parseFloat(prompt("Długość boku b"));
+        let c = parseFloat(prompt("Długość boku c"));
+
+        // Sprawdzenie warunku trójkąta
+        if(czyMoznaZbudowacTrojkat(a, b, c)) {
+            document.write("Można zbudować trójkąt o podanych bokach.");
+        } else {
+            document.write("Nie można zbudować trójkąta o podanych bokach.");
+        }
+
+        // Funkcja sprawdzająca warunek trójkąta
+        function czyMoznaZbudowacTrojkat(a, b, c) {
+            return a + b > c && a + c > b && b + c > a;
+        }
+    </script>
+</body>
+</html>

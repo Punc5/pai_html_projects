@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do ... while - pętla (część 5.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, który: 
+        // - będzie generował liczbę losową całkowitą od 5 do 150;
+        // - następnie będzie wyświetlał wszystkie liczby i obliczał ich sumę;
+        // - losowanie liczb powinno zakończyć się po wylosowaniu 100 liczb.
+
+        let suma = 0;
+
+        let i = 0;
+
+        do {  
+            let a = Math.floor(Math.random() * (150 - 5 + 1)) + 5;
+            suma += a; // suma = suma + a;
+            document.write(a + "<br>, ");
+            i++;   
+        } while(i < 100);
+
+        document.write("<br>suma = " + suma);
+    </script>
+</body>
+</html>

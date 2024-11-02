@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcje (część 4.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym zdefiniujesz:
+        // - funkcję wyznaczającą i rozwiązującą równanie kwadratowe;
+        // - funkcję wyświetlającą ciąg znaków;
+        // - wywołaj funkcję.
+        
+        let a = Number(prompt("Podaj wartość a (różną od zera):"));
+        let b = Number(prompt("Podaj wartość b:"));
+        let c = Number(prompt("Podaj wartość c:"));
+
+        function funkcjaKwadratowa(a, b, c) 
+        {
+            let delta = b * b - 4 * a * c;
+            if (delta > 0) 
+            {
+                let x1 = (-b - Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b + Math.sqrt(delta)) / (2 * a);
+                return `Funkcja ma dwa rozwiązania: x<sub>1</sub> = ${x1}, x<sub>2</sub> = ${x2} <br>`;
+            } 
+                else if (delta === 0) 
+            {
+                let x0 = -b / (2 * a);
+                return `Funkcja ma jedno rozwiązanie: x<sub>0 = ${x0} <br>`;
+            } 
+            else 
+            {
+                return "Funkcja nie ma rozwiązań w zbiorze liczb rzeczywistych! <br>";
+            }
+        }
+        
+        let wynik = funkcjaKwadratowa(a, b, c);
+        
+        function wyswietlCiagZnakow(ciag) 
+        {
+            document.write(ciag);
+        }
+
+        wyswietlCiagZnakow("<p><b>Funkcja kwadratowa ma następujące rozwiązania: </b></p>" + wynik);
+    </script>
+</body>
+</html>

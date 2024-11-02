@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if ... else - kalkulator</title>
+</head>
+<body>
+    <h2>Kalkulator</h2>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika wartości x i y;
+        // - obliczysz sumę, różnicę, iloczyn i iloraz wartości x i y.
+        
+        // Pobranie danych od użytkownika
+        let x = Number(prompt("Podaj x"));
+        let y = Number(prompt("Podaj y"));
+
+        // Sprawdzenie czy podane dane są liczbami
+        if(isNaN(x) || isNaN(y)) {
+            // Wyświetlenie komunikatu o błędzie, gdy dane nie są liczbami
+            document.write("<p><b>Nieprawidłowe dane</b>. Podaj poprawne liczby</p>");
+        } else {
+            // Wyświetlenie wartości x i y
+            document.write("x = " + x + "<br>")
+            document.write("y = " + y + "<br>")
+
+            // Dodawanie
+            let suma = x + y;
+            document.write("x + y = " + suma + "<br>");
+
+            // Odejmowanie
+            let roznica = x - y;
+            document.write("x - y = " + roznica + "<br>");
+
+            // Mnożenie
+            let iloczyn = x * y;
+            document.write("x * y = " + iloczyn + "<br>");
+
+            // Sprawdzenie, czy y nie jest równe 0
+            if(y !== 0) {
+                // Dzielenie
+                let iloraz = x / y;
+                document.write("x / y = " + iloraz + "<br>");
+            } else {
+                // Wyświetlenie komunikatu o niemożliwości dzielenia przez 0
+                document.write("<p><b>Nie można dzielić przez 0</b>; Podaj y różne od 0</p>");
+            }
+
+            // Obliczenie kwadratu liczby
+            let kwadrat = Math.pow(x, 2);
+            document.write("Kwadrat liczby = " + kwadrat + "<br>");
+
+            // Obliczenie sześcianu liczby
+            let szescian = Math.pow(x, 3);
+            document.write("Sześcian liczby = " + szescian + "<br>");
+        }
+    </script>
+</body>
+</html>

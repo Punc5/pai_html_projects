@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if ... else - pierwiastek liczby - kalkulator</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika wartość w;
+        // - obliczysz pierwiastek i kwadrat wartości w.
+        
+        // Pobranie liczby od użytkownika
+        let w = parseFloat(prompt("Podaj liczbę"));
+
+        // Sprawdzenie, czy podano liczbę
+        if(!isNaN(w)) {
+            if(w > 0) {
+                w = Math.sqrt(w); // obliczenie pierwiastka
+                document.write("Pierwiastek liczby w: " + w);
+            } else {
+                w = Math.pow(w, 2); // obliczenie kwadratu
+                document.write("Kwadrat liczby w: " + w);
+            }
+        } else {
+            document.write("To nie jest liczba!");
+        }
+        document.write("<br>KONIEC PROGRAMU");
+    </script>
+</body>
+</html>

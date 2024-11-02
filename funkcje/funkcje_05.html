@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcje (część 5.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // SUPER FUNKCJA
+        // Napisz skrypt, w którym zdefiniujesz:
+        // a) funkcję wyznaczającą i zwracającą rozwiązanie układu równań;
+        // b) funkcję wyświetlającą ciąg znaków: 2, 5, 8, 11, 14;
+        // Wywołaj funkcję.
+
+        // funkcja wyznaczająca - a)
+        function superFunkcja(x) {
+            let f = 0;
+
+            switch(true) {
+                case(x < 0):
+                    f = Math.pow(x, 2) + 1;
+                    document.write("f = " + f);
+                    break;
+
+                case(x == 1):
+                    f = Math.sqrt(x + 1);
+                    document.write("f = " + f);
+                    break;
+
+                case(x == 2):
+                    f = 3 * x + 2;
+                    document.write("f = " + f);
+                    break;
+                
+                default:
+                    f = Math.pow(x, 2);
+                    document.write("f = " + f);
+                    break;
+            }
+        }
+
+        // funkcja wyświetlająca - b)
+        function superFunkcja2() {
+            let i = 2;
+
+            let n = 14;
+            
+            document.write("<br>ciąg liczb: ");
+
+            while(i <= n) {
+                if(i == n) {
+                    document.write(i);
+                } else {
+                    document.write(i + ", ");
+                }
+                i = i + 3;
+            }
+        }
+    </script>
+</body>
+</html>

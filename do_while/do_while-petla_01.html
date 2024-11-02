@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do ... while - pętla (część 1.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika 2 liczby dodatnie;
+        // - następnie obliczysz sumę tych 2 liczb;
+        // - użyj pętli "do while" do błędnego podania wartości liczbowej przez użytkownika.
+
+        let suma = 0;
+
+        let a = 0;
+        let b = 0;
+
+        do {
+            a = Number(prompt("Podaj liczbę a (dodatnią):"));
+            b = Number(prompt("Podaj liczbę b (dodatnią):"));
+
+            if(a <= 0 || b <= 0) {
+                document.write("<br>Obie liczby muszą być dodatnie. Spróbuj ponownie.");
+            }
+        } while(a <= 0 || b <= 0);
+
+        suma = a + b;
+    
+        document.write("suma = " + suma);
+    </script>
+</body>
+</html>

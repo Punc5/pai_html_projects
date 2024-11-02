@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for - pętla (wersja 1.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika pierwszą i ostatnią liczbę w pętli;
+        // - pierwsza liczba będzie początkiem a ostatnia - końcem pętli.
+
+        let start = Number(prompt("Start pętli"));
+        let koniec = Number(prompt("Koniec pętli"));
+
+        for(let i = start; i <= koniec; i++) {
+            if(i < koniec) {
+                document.write(i + ", ");
+            } else {
+                document.write(i);
+            }
+        }
+    </script>
+</body>
+</html>

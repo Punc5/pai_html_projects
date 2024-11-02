@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekty daty</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Obiekty daty wbudowane
+        document.write("<p><b>Daty wbudowane:</b></p>");
+        let currentCzas = new Date();
+        
+        let cz1 = currentCzas.toString();
+        document.write(cz1 + "<br>");
+
+        let cz2 = currentCzas.toLocaleString();
+        document.write(cz2 + "<br>");
+
+        let cz3 = currentCzas.toGMTString();
+        document.write(cz3 + "<br>");
+
+        let cz4 = currentCzas.toTimeString();
+        document.write(cz4 + "<br>");
+
+        // Wyświetlanie daty i czasu, co sekundę +1 sekunda
+        function wyswietlCzas() {
+            let czas = new Date();
+            
+            let godzina = czas.getHours();
+            let minuta = czas.getMinutes();
+            let sekunda = czas.getSeconds();
+
+            let dzien = czas.getDate();
+            let miesiac = czas.getMonth() + 1;
+            let rok = czas.getFullYear();
+
+            document.write("Jest teraz czas: ");
+            if(godzina < 10) {
+                document.write("0" + godzina + ":");
+            } else {
+                document.write(godzina + ":");
+            }
+
+            if(minuta < 10) {
+                document.write("0" + minuta + ":");
+            } else {
+                document.write(minuta + ":");
+            }
+
+            if(sekunda < 10) {
+                document.write("0" + sekunda + "<br>");
+            } else {
+                document.write(sekunda + "<br>");
+            }
+
+            if(dzien < 10) {
+                dzien = "0" + dzien;
+            }
+
+            if(miesiac < 10) {
+                miesiac = "0" + miesiac;
+            }
+
+            // document.write("<p><b>Kalendarz:</b></p>");
+            // document.write("Jest teraz czas: " + godzina + ":", minuta + ":", sekunda + "<br>");
+            
+            document.write("Data: " + dzien + "." + miesiac + "." + rok + " r." + "<br>");        }
+
+        setInterval(() => {
+            wyswietlCzas()}, 1000);
+        
+        // Rok, miesiąc, dzień, godzina, minuta, sekunda
+        let specyficznyCzas = new Date(2008, 4, 12, 15, 24, 10);
+        specyficznyCzas.setFullYear(1999);
+
+        document.write("specyficzny czas po zmianie roku: " + specyficznyCzas.getFullYear() + "<br>");
+        // document.write(czas.ToString());
+        
+        czas.setYear(1999);
+        document.write(czas.getYear());
+        
+        // Konkretny czas
+        getDate();
+        getDay();
+        getYear();
+        getFullYear();
+        getHours();
+        getMiliseconds();
+        getMinutes();
+        getMonth();
+        getSeconds();
+        getTime();
+    </script>
+</body>
+</html>

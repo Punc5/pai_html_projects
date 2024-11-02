@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekty (część 3.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym zdefiniujesz 2 obiekty zwierze o polach: typ, gatunek, domowe czy niedomowe, odżywianie, czy ssa i maść.
+        // Dla obiektu zdefiniuj konstruktor z parametrami oraz metodę wprowadzające dane do obiektu i wyświetlające dane do obiektu.
+        
+        function zwierze(ktyp, kgatunek, kudomowienie, kodzywianie, kssanie, kmasc) {
+            this.typ = ""
+            this.gatunek = ""
+            this.udomowienie = ""
+            this.odzywianie = ""
+            this.ssanie = "";
+            this.masc = "";
+
+            this.wprowadz = function() {
+                this.typ = prompt("Podaj typ");
+                this.gatunek = prompt("Podaj gatunek");
+                this.udomowienie = prompt("Domowe czy niedomowe?");
+                this.odzywianie = prompt("Sposób odżywiania");
+                this.ssanie = prompt("Czy ssa?");
+                this.masc = prompt("Jaka maść?");
+
+                this.wyswietl = function() {
+                    document.write("typ: " + this.typ + "<br>", "gatunek: " + this.gatunek + "<br>", "udomowione: " + this.udomowienie + "<br>", "odżywianie: " + this.odzywianie + "<br>", "ssanie: " + this.ssanie + "<br>", "maść: " + this.masc + "<br>"); }
+            }
+        }
+        
+        document.write("<p><b>Pierwsze zwierzę:</b></p>");
+        let zw1 = new zwierze();
+        zw1.wprowadz();
+        zw1.wyswietl();
+        
+        document.write("<p><b>Drugie zwierzę:</b></p>");
+        let zw2 = new zwierze();
+        zw2.wprowadz();
+        zw2.wyswietl();
+    </script>
+</body>
+</html>

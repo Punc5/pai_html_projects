@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for - suma serii liczbowej (część 2.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let n = 10; // Przykładowa wartość n (można zmienić na inną liczbę)
+        let k = 3;
+        let suma = 0;
+
+        for(let i = 1; i <= n; i++) {
+            suma = suma + (k + 3) / 2;
+            k += 2; // k = k + 2
+        }
+        document.write("wynik sumy serii = " + suma);
+    </script>
+</body>
+</html>
