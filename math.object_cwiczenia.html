@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math.object - ćwiczenia</title>
+</head>
+<body>
+    <h2>Wyniki dla podanej wartości x</h2>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // - pobierzesz od użytkownika wartość x;
+        // - obliczysz wynik w zależnosci od wartości x.
+        
+        // Pobranie liczby x od użytkownika
+        let x = Number(prompt("Podaj x"));
+        let wynik = 0;
+
+        // Sprawdzenie, czy podane dane są liczbą
+        if (isNaN(x)) {
+            // Wyświetlenie komunikatu o błędzie, gdy x nie jest liczbą
+            document.write("Wprowadź liczbę");
+        } else {
+            // Obliczenie wyniku w zależności od wartości x
+            if (x == 0) {
+                // Dla x równego 0
+                wynik = Math.abs(x + 2);
+            } else if (x == 5) {
+                // Dla x równego 5
+                wynik = Math.sqrt(Math.pow(x, 3) + 1);
+            } else {   
+                // Dla pozostałych wartości x
+                if (x > -10 && x < 4) {
+                    // Dla x od -10 do 4 (z wyłączeniem 4)
+                    wynik = Math.pow(x, 3) + 3;
+                } else {
+                    // Dla pozostałych wartości x
+                    wynik = x;
+                }
+            }
+            // Wyświetlenie wyniku
+            document.write("wynik = " + wynik);
+        }
+    </script>
+</body>
+</html>

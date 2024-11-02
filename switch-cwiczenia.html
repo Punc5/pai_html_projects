@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch - ćwiczenia</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let ocena = Number(prompt("Podaj symbol oceny: "));
+        
+        switch(ocena)
+        {
+            case 1: 
+                document.write("Niedostateczny");
+                break;
+
+            case 5: 
+                document.write("Bardzo dobry");
+                break;
+
+            default: 
+                document.write("Zła ocena");
+                break;
+        }
+        
+        // Napisz skrypt, w którym:
+        // - za pomocą instrukcji switch zbudujesz kalkulator wykonujący następujące działania: 
+        //  * d - dodawanie; 
+        //  * o - odejmowanie; 
+        //  * m - mnożenie; 
+        //  * z - dzielenie (dla dwóch podanych liczb).
+
+        let dzialanie = prompt("Proszę podać działanie; d - dodawanie, o - odejmowanie, m - mnożenie, z - dzielenie");
+        let a = (Number(prompt("Podaj liczbę a: ")));
+        let b = (Number(prompt("Podaj liczbę b: ")));
+        let wynik = 0;
+   
+        switch(działanie)
+        {
+            case "d": 
+                wynik = a + b;
+                document.write("suma: "+ wynik);
+                break;
+
+            case "o": 
+                wynik = a - b;
+                document.write("różnica: "+ wynik);
+                break;
+                
+            case "m": 
+                wynik = a * b;
+                document.write("iloczyn: "+ wynik);
+                break;
+
+            case "z":
+                if(b != 0)
+                {
+                    wynik = a / b;
+                    document.write("iloraz: "+ wynik);
+                }
+                else
+                {
+                document.write("Nie dzielimy przez 0");
+                }
+                break;
+
+            default: 
+                document.write("Niepoprawna opcja");
+                break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do ... while - pętla (część 2.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Pętla do while, która zapewnia, że użytkownik wprowadza liczby większe od 0
+        /*
+        let a, b;
+        do
+        {
+            a = Number(prompt("<br>Podaj liczbę a = "));
+            b = Number(prompt("<br>Podaj liczbę b = "));
+        }
+        while((a <= 0) || (b <= 0));
+        document.write("suma =" + suma);
+
+        // Napisz skrypt, w którym: 
+        // - za pomocą pętli do while obliczysz iloczyn w podanych przez użytkownika wartości liczbowych;
+        // - podawanie liczb powinno zakończyć się w momencie, gdy iloczyn przekroczy wartość 100000.
+        
+        let iloczyn = 1;
+        do 
+        {
+            a = Number(prompt("<br>Podaj liczbę a = "));
+            b = Number(prompt("<br>Podaj liczbę b = "));
+            iloczyn = a * b;
+        }
+        while (iloczyn <= 100000)
+        document.write("<br>iloczyn = " + iloczyn);
+
+        // Napisz skrypt, który: 
+        // - będzie generował liczbę losową całkowitą od 5 do 150;
+        // - następnie będzie wyświetlał wszystkie liczby i obliczał ich sumę;
+        // - losowanie liczb powinno zakończyć się po wylosowaniu 100 liczb.
+
+        let suma = 0;
+        let i = 0;
+
+        do
+        {  
+            let a = Math.floor(Math.random() * (145+5)) + 5;
+            suma += a;
+            document.write(a + "<br>, ");
+            i++;   
+        }   
+        while(i<100);
+        document.write("<br>suma = "+ suma);
+        */
+
+        // Napisz skrypt, który: 
+        // - będzie obliczał iloczyn z 20 wylosowanych liczb z przedziału od 2 do 50 włącznie;
+        // - po wykonaniu pętli do while program ma wyświetlić iloczyn oraz największą wylosowaną liczbę.
+
+        let i = 1;
+        let iloczyn = 1;
+        let a = 0;
+        let max = 2;
+        
+        do
+        {
+            a = Math.floor(Math.random()*48+2);
+            if (a > max);
+            max = a;
+            iloczyn *= a;
+            document.write(a + "<br>,");
+            i++;
+        }
+        while(i<=20);
+        document.write("<br>iloczyn = " + iloczyn);
+        document.write("<br>max = " + max);
+    </script>
+</body>
+</html>
