@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekty tablice (array) (część 3.)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Napisz skrypt, w którym:
+        // a) utworzysz trzydziesto-elementową tablicę liczb całkowitych;
+        // b) do tablicy przypiszesz wylosowane liczby z przedziału od 15 do 75;
+        // c) obliczysz iloczyn z wartości tablicy o indeksach podzielnych przez 3;
+        // d) wyświetlisz wszystkie elementy tablicy, które mieszczą się w przedziale od 20 do 30 i od 40 do 60 w postaci tabeli.
+
+        let tab = new Array(30);
+        
+        for (let i = 0; i < tab.length; i++) {
+            tab[i] = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
+        }
+        
+        let iloczyn = 1;
+
+        for (let i = 0; i < tab.length; i++) {
+            if (i % 3 === 0) {
+                iloczyn *= tab[i];
+            }
+        }
+
+        document.write("Iloczyn liczb na indeksach podzielnych przez 3: " + iloczyn);
+        document.write("<br><br>");
+
+        document.write("<table border='1' style='border-collapse: collapse; width: 100%; text-align: center;'>");
+        document.write("<tr><th>Elementy tablicy</th></tr>");
+
+        for (let i = 0; i < tab.length; i++) {
+            if ((tab[i] >= 20 && tab[i] <= 30) || (tab[i] >= 40 && tab[i] <= 60)) {
+                document.write(`<tr><td>${tab[i]}</td></tr>`);
+            }
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>
