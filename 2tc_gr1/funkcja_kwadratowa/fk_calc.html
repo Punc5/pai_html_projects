@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcja kwadratowa - oblicz to!</title>
+</head>
+<body>
+    <h2>Funkcja kwadratowa - Delta, wierzchołki i miejsca zerowe</h2>
+    <script type="text/javascript">
+        let a = Number(prompt("Podaj a; Wartość większa od 0"));
+        if(a == 0)
+        {
+            document.write("<p><b>Nie możemy obliczyć funkcji kwadratowej z podanymi danymi.</b> Przyczyną może być:</p>" + "1) Wprowadzenie 0 jako współczynnik a (a ≠ 0, b i c = 0)<br>" + "2) Brak podanych danych (współczynników)");
+        }
+        else
+        {
+            let b = Number(prompt("Podaj b"));
+            let c = Number(prompt("Podaj c"));
+            // Delta
+            delta = Math.pow(b,2) - 4 * a * c;
+            document.write("Δ = " + delta + "<br>");
+            // Wierzchołki
+            let p = -b / (2 * a);
+            let q = -delta / (4 * a);
+            document.write("<p><b>Wierzchołki x<sub>w</sub> i y<sub>w</sub>:</b>" + "<br>p = " + p + "<br>q = " + q + "<br></p>");
+            // Miejsca zerowe   
+            if(delta > 0)
+            {
+                let pierw1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let pierw2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.write("<p><b>Funkcja kwadratowa ma dwa pierwiastki:</b>" + "<br>x<sub>1</sub> = " + pierw1 + "<br>x<sub>2</sub> = " + pierw2 + "<br></p>");
+            }
+            else if(delta == 0)
+            {
+                let pierw0 = -b / (2 * a);
+                document.write("<p><b>Funkcja kwadratowa ma jeden pierwiastek:</b>" + "<br>x<sub>0</sub> = " + pierw0 + "<br>");
+            }
+            else
+            {
+                document.write("<p><b>Funkcja kwadratowa nie ma pierwiastków.</b> Delta jest mniejsza od 0</p><br>");
+            }
+        }       
+    </script>
+</body>
+</html>
